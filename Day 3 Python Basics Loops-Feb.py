@@ -1,10 +1,10 @@
 #!/usr/bin/env python
 # coding: utf-8
-# For loop
+# For loop: starting----->ending point
 
-for item in list_of_items
+for item in list_of_items:
     do something to each item
-# In[3]:
+# In[ ]:
 
 
 fruits=["apple","peach","pear"]
@@ -13,23 +13,15 @@ for i in fruits:
 #H0w to print , say, apple pie, peach pie or pear pie
 
 
-# In[4]:
+# In[2]:
 
 
 for i in range(1,3):
     print(i)
     
 
-
-# In[2]:
-
-
 for i in range(1,3):
     print("hi")
-
-
-# In[2]:
-
 
 for i in range (1,4):
     print("Hello")
@@ -37,15 +29,16 @@ for i in range (1,4):
 
 # # Exercise
 
-# In[8]:
+# In[11]:
 
 
 a=23
-a+=1
+#a+=5 #increment operator
+a-=1 #decrement operator
 print(a)
 
 
-# In[14]:
+# In[12]:
 
 
 student_heights = input("Input a list of student heights ").split()
@@ -54,18 +47,18 @@ for n in range(0, len(student_heights)):
 total_height = 0
 for height in student_heights:
   total_height += height
-#print(f"total height = {total_height}")
+
 print("total height = ", total_height)
 number_of_students = 0
 for student in student_heights:
   number_of_students += 1
-print(f"number of students = {number_of_students}")
-  
-average_height = round(total_height / number_of_students)
+
+print("number of students = ", number_of_students)  
+average_height = (total_height / number_of_students)
 print(average_height)
 
 
-# In[15]:
+# In[13]:
 
 
 b={"a":1,"b":2}
@@ -75,7 +68,7 @@ for i in b:
 
 # # Iteration in Loops
 
-# In[16]:
+# In[53]:
 
 
 print("List Iteration")
@@ -84,7 +77,7 @@ for i in l:
     print(i)
 
 
-# In[17]:
+# In[54]:
 
 
 # Iterating over a tuple (immutable)
@@ -94,17 +87,17 @@ for i in t:
     print(i)
 
 
-# In[18]:
+# In[57]:
 
 
 # Iterating over a String
 print("\nString Iteration")
-s = "Python"
+s = "Monika"
 for i in s:
     print(i)
 
 
-# In[19]:
+# In[58]:
 
 
 # Iterating over dictionary
@@ -113,10 +106,10 @@ d = dict()
 d['red'] = 100
 d['pink'] = 201
 for i in d:
-    print("%s %d" % (i, d[i]))
+    print("%d %s" % (d[i], i))
 
 
-# In[20]:
+# In[59]:
 
 
 # Iterating over a set
@@ -161,21 +154,21 @@ Syntax:-
 
 for number in range(a,b):
     print(number)
-# In[8]:
+# In[60]:
 
 
 for number in range(1,10):
     print(number)
 
 
-# In[9]:
+# In[14]:
 
 
 for number in range(1,10,3):
     print(number)
 
 
-# In[22]:
+# In[15]:
 
 
 ## Write a script to input a numerical list of user input length
@@ -187,7 +180,7 @@ for i in range (0,n):
 print(l)
 
 
-# In[2]:
+# In[16]:
 
 
 #Create a dic with s.no as keys and colors as values
@@ -207,15 +200,11 @@ print(d)
 # It can be used to create new lists from other iterable elements such as arrays, strings, tuples, lists, and so on. It consists of brackets containing the expression. To iterate over all of the elements, the system uses the for loop to execute the expression for each one
 # When you use list comprehension instead of loops, you can create a list with far less effort and code.# 
 
-# In[6]:
+# In[21]:
 
 
 for i in range(8,1,-1):
     print(i)
-
-
-# In[3]:
-
 
 a = [i for i in range(8,1,-1)]
 print(a)
@@ -223,16 +212,16 @@ print(a)
 
 # # List comprehension isn’t just for integers; it can also be applied to strings.
 
-# In[7]:
+# In[19]:
 
 
 #Script to print last element of all list members
-w=["Basics", "of", "Python"]
+w=["Basics", "ofshhksjlkj", "Python"]
 for word in w:
-    print(word[-2])
+    print(word[3])
 
 
-# In[11]:
+# In[20]:
 
 
 #Another way: Script to print last element of all list members
@@ -240,10 +229,6 @@ for word in w:
 w = ["Programming", "is", "easy"]
 result = [word[-2] for word in w]
 print(result)
-
-
-# In[12]:
-
 
 ## Multiplication of two lists
 l=[1,2]
@@ -257,7 +242,7 @@ print(k)
 # # The for loop is a common way to iterate through a list. List comprehension, on the other hand, is a more efficient way to iterate through a list because it requires fewer lines of code.
 # List comprehension requires less computation power than a for loop because it takes up less space and code. This is useful when working on large programs, as efficiency becomes a major consideration when the code is lengthy.
 
-# In[13]:
+# In[40]:
 
 
 # creating the empty list
@@ -268,32 +253,20 @@ for x in range(10):
 print (old_list )
 
 
-# In[14]:
+# In[41]:
 
 
 # creating the set with the help of list comprehension
 old_list = [x*2 for x in range(10)]
 print (old_list)
 
-
-# In[15]:
-
-
 #Using if with List Comprehension
 even_list = [ i for i in range(10) if i % 2 == 0]
 print(even_list)
 
-
-# In[16]:
-
-
 filtered_list = [ x for x in range(50) if x % 2 == 0 if x % 5 == 0]   
 #If x satisfies both conditions, x is appended to filtered_list.
 print(filtered_list)
-
-
-# In[17]:
-
 
 
 l = ["even" if y%2==0 else "odd" for y in range(5)]
@@ -305,7 +278,7 @@ print(l)
 # # Questions for Practice!!
 # 1. Finding the elements in a list in which elements are ended with the letter ‘d’ and the length of that element is greater than 2.
 
-# In[18]:
+# In[41]:
 
 
 names = ['ABcD','Cd','acd','bbB','fb','xa','Red','Med']  # This function filter out all the strings 
@@ -316,13 +289,24 @@ sol
 
 # # 2. Reverse each String in a Tuple using List Comprehension
 
-# In[19]:
+# In[1]:
 
 
 a="life"
-a[::]
+
+
+# In[7]:
+
+
 a[:-1]
+
 a[-1:]
+
+
+# In[2]:
+
+
+a[::-1]
 
 
 # In[20]:
@@ -336,7 +320,7 @@ print(a)
 # # Dictionary comprehension
 # Dictionary comprehension allows you to create dictionaries in Python, as the name implies.
 
-# In[21]:
+# In[54]:
 
 
 # using Python to showcase dictionary comprehension
@@ -355,22 +339,7 @@ print(d)
 #     
 # When the something_is_true becomes false, then the loop stops and comes out of it.
 
-# In[1]:
-
-
-# program to display numbers from 1 to 5
-
-# initialize the variable
-i = 1
-n = 5
-
-# while loop from i = 1 to 5
-while i <= n:
-    print(i)
-    i = i + 1
-
-
-# In[22]:
+# In[56]:
 
 
 i=1 #inti
@@ -379,7 +348,7 @@ while i<4: #condit
     i=i+1
 
 
-# In[23]:
+# In[57]:
 
 
 #Exit 
@@ -391,7 +360,7 @@ while i<6:
     i+=1
 
 
-# In[2]:
+# In[58]:
 
 
 #continue
@@ -403,28 +372,16 @@ while i<6:
     print(i)
 
 
-# In[25]:
+# # Exercise: Print your name as many number of times as the user wants using while loop
+
+# In[3]:
 
 
-## Write Script that will input 5 names if name=="Name" break the loop and if name=" " continue
-
-
-# In[1]:
-
-
-name = input("Input a list of student heights ").split()
-namei=int(name)
-while namei<6:
-    if name=="monika":
-        break
-    elif name== " ":
-        continue
-
-
-# In[ ]:
-
-
-
+n = 1
+a=input("your name\n")
+while n < 5:
+    print("Hello"+" " +a)
+    n = n+1
 
 
 # In[ ]:
